@@ -455,6 +455,7 @@ FILE ( GLOB PBRT_SOURCE
   src/cameras/*
   src/filters/*
   src/integrators/*
+  src/pzq-integrators/*
   src/lights/*
   src/materials/*
   src/samplers/*
@@ -473,6 +474,7 @@ SOURCE_GROUP (accelerators REGULAR_EXPRESSION src/accelerators/.*)
 SOURCE_GROUP (cameras REGULAR_EXPRESSION src/cameras/.*)
 SOURCE_GROUP (filters REGULAR_EXPRESSION src/filters/.*)
 SOURCE_GROUP (integrators REGULAR_EXPRESSION src/integrators/.*)
+SOURCE_GROUP (pqz-integrators REGULAR_EXPRESSION src/pzq-integrators/.*)
 SOURCE_GROUP (lights REGULAR_EXPRESSION src/lights/.*)
 SOURCE_GROUP (materials REGULAR_EXPRESSION src/materials/.*)
 SOURCE_GROUP (samplers REGULAR_EXPRESSION src/samplers/.*)

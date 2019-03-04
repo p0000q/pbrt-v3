@@ -60,6 +60,7 @@
 #include "integrators/sppm.h"
 #include "integrators/volpath.h"
 #include "integrators/whitted.h"
+#include "pzq-integrators/pzq_whitted_integrator.h"
 #include "lights/diffuse.h"
 #include "lights/distant.h"
 #include "lights/goniometric.h"
@@ -1695,7 +1696,10 @@ Integrator *RenderOptions::MakeIntegrator() const {
         integrator = CreateAOIntegrator(IntegratorParams, sampler, camera);
     } else if (IntegratorName == "sppm") {
         integrator = CreateSPPMIntegrator(IntegratorParams, camera);
-    } else {
+	} else if (IntegratorName == "pzq-whitted") {
+		integrator = CreatePzqWhittedIntegrator(IntegratorParams, sampler, camera);
+	}
+	else {
         Error("Integrator \"%s\" unknown.", IntegratorName.c_str());
         return nullptr;
     }
