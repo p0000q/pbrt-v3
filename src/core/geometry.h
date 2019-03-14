@@ -1437,6 +1437,9 @@ inline bool Bounds3<T>::IntersectP(const Ray &ray, const Vector3f &invDir,
     return (tMin < ray.tMax) && (tMax > 0);
 }
 
+/**
+ * see Shapes/Managing Rounding Error
+ */
 inline Point3f OffsetRayOrigin(const Point3f &p, const Vector3f &pError,
                                const Normal3f &n, const Vector3f &w) {
     Float d = Dot(Abs(n), pError);
